@@ -1,0 +1,11 @@
+/* DotAnimation.css */
+
+@keyframes moveDot {
+    to {
+      transform: translate(150px, 150px);
+    }
+  }
+  
+  .dot {
+    animation: moveDot 5s infinite alternate;
+  }

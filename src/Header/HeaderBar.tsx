@@ -8,7 +8,7 @@ const HeaderBar: React.FC = () => {
   };
 
   return (
-    <header className="w-full fixed top-0 left-0 bg-opacity-0 p-4">
+    <header className="w-full top-0 left-0 absolute z-10 p-4">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
           <img className="h-8 mr-2 scale-x-[-1]" src="/airship.png" />
