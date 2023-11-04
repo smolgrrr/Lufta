@@ -6,16 +6,16 @@ const Mission: React.FC = () => {
         <div className="text-left p-3 sm:p-5 md:p-8 lg:p-12">
             {/* Mission */}
             <div className='p-4 sm:p-6 lg:p-8 px-4 sm:px-8 lg:px-16 '>
-                <h1 className='font-medium text-xl sm:text-2xl'>
+                <h1 id="our-mission" className='font-medium text-xl sm:text-2xl'>
                     Our Mission: 
                 </h1>
-                <p className='text-2xl sm:text-xl lg:text-4xl font-medium mb-2 sm:mb-4 lg:mb-8'>Elevate access to the skies with autonomous airships</p>
+                <p className='text-xl sm:text-xl lg:text-4xl font-medium mb-2 sm:mb-4 lg:mb-8'>Elevate access to the skies with autonomous airships.</p>
             </div>
 
             {/* Customers */}
             <div className="w-full h-0.5 bg-black my-4"></div>
             <div className="py-8 sm:py-12 lg:py-16">
-                <div className='font-medium text-xl sm:text-2xl pl-4 sm:pl-8 lg:pl-16 pb-4'>Our Customers:</div>
+                <div id="our-customers" className='font-medium text-xl sm:text-2xl pl-4 sm:pl-8 lg:pl-16 pb-4'>Our Customers:</div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 lg:gap-12">
                     <div className='text-start px-4 sm:px-8 lg:px-16 pb-8'>
                         <p className="text-4xl sm:text-5xl lg:text-6xl font-semibold mb-4 sm:mb-8 lg:mb-16">Freight</p>
@@ -40,7 +40,7 @@ const Mission: React.FC = () => {
             <div className="w-full h-0.5 bg-black my-4"></div>
             <div className="pt-8 sm:pt-12 lg:pt-16">
                 <div className='pl-4 sm:pl-8 lg:pl-16 pb-4'>
-                    <span className='font-medium text-xl sm:text-2xl'>
+                    <span id="our-technology" className='font-medium text-xl sm:text-2xl'>
                         Our Technology:
                     </span>
                 </div>

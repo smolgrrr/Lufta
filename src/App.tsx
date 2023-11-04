@@ -1,27 +1,42 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HeroBanner from './Header/HeroBanner';
 import HeaderBar from './Header/HeaderBar';
 import Footer from './Footer/Footer';
-import { Parallax } from 'react-parallax';
 import BodyPrinting from './Body/3DPrinting';
-import DotAnimation from './Body/DotAnimation';
 import Autonomy from './Body/Autonomy';
 import Mission from './Body/Mission';
 import RoadMap from './Body/RoadMap';
 
+// Import the new components
+import PrivacyPolicy from './Footer/PrivacyPolicy';
+import TermsOfService from './Footer/TermsOfService';
+import ContactUs from './Footer/ContactUs';
+
+
 function App() {
   return (
-    <div className="App flex flex-col bg-[#eee7e3]">
-      <HeaderBar />
-      <HeroBanner />
-      <Mission />
-      <BodyPrinting />
-      <Autonomy />
-      <RoadMap />
-      <Footer />
-    </div>
+    <Router>
+      <div className="App flex flex-col bg-[#eee7e3]">
+        <HeaderBar />
+        <Routes>
+          <Route path="/" element={
+            <>
+              <HeroBanner />
+              <Mission />
+              <BodyPrinting />
+              <Autonomy />
+              <RoadMap />
+            </>
+          } />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/contact-us" element={<ContactUs />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

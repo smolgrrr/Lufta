@@ -59,14 +59,6 @@ const HeroBanner: React.FC = () => {
       >
         <source src={currentVideo} type="video/mp4" />
       </video>
-      {!isPlaying && 
-        <button 
-          onClick={playVideo} 
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 text-white bg-blue-600 p-4 rounded"
-        >
-          Play
-        </button>
-      }
       <div className={`absolute top-0 left-0 w-full h-full bg-black transition-opacity duration-500 ${overlayOpacity}`}></div>
     </div>
   );

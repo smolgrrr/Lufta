@@ -6,7 +6,7 @@ const RoadMap: React.FC = () => {
         <div className="text-left p-3 sm:p-4 lg:p-6">
             <div className="w-full h-0.5 bg-black my-4"></div>
             <div className='p-4 sm:px-6 lg:px-16'>
-                <h1 className='font-medium text-xl sm:text-2xl pb-16 lg:pb-4'>
+                <h1 id="our-roadmap" className='font-medium text-xl sm:text-2xl pb-16 lg:pb-4'>
                     Our Roadmap:
                 </h1>
                 <div className='grid grid-cols-1 sm:grid-cols-3'>
