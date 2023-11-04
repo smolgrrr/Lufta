@@ -9,6 +9,7 @@ import BodyPrinting from './Body/3DPrinting';
 import DotAnimation from './Body/DotAnimation';
 import Autonomy from './Body/Autonomy';
 import Mission from './Body/Mission';
+import RoadMap from './Body/RoadMap';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Mission />
       <BodyPrinting />
       <Autonomy />
+      <RoadMap />
       <Footer />
     </div>
   );
