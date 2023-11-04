@@ -12,13 +12,13 @@ const HeaderBar: React.FC = () => {
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
           <img className="h-8 mr-2 scale-x-[-1]" src="/airship.png" />
-          <h1 className="text-3xl font-bold text-white">Lufta</h1>
+          <h1 className="text-3xl font-bold text-[#eee7e3]">Lufta</h1>
         </div>
         <button onClick={handleMenuClick} className="p-2">
           {/* Simple 3-line menu icon */}
-          <div className="bg-white h-0.5 w-5 mb-1"></div>
-          <div className="bg-white h-0.5 w-5 mb-1"></div>
-          <div className="bg-white h-0.5 w-5"></div>
+          <div className="bg-[#eee7e3] h-0.5 w-5 mb-1"></div>
+          <div className="bg-[#eee7e3] h-0.5 w-5 mb-1"></div>
+          <div className="bg-[#eee7e3] h-0.5 w-5"></div>
         </button>
       </div>
     </header>

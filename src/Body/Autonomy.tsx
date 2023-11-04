@@ -5,20 +5,19 @@ import DotAnimation from './DotAnimation';
 const Autonomy: React.FC = () => {
 
     return (
-        <div className="z-2 p-16 h-screen text-right">
+        <div className="z-2 p-16">
         {/* <div className="relative w-full h-64 bg-cover bg-center z-1" style={{ backgroundImage: 'url(WAAM.jpg)' }}></div> */}
-        <h1 className='font-extrabold font-Inter text-6xl p-4 mb-6'>AUTONOMY</h1>
         <div className="grid grid-cols-2">
-        <DotAnimation />
-            <div className="">
-
-              <p className="text-xl mb-12 p-4">Autonomous Flight, Autonomous Manufacturing</p>
-              <div>
+            <DotAnimation />
+            <div className="text-left">
+              <h1 className='font-extrabold font-Inter text-6xl p-4 mb-6'>Autonomy</h1>
+              <p className="text-xl mb-12 p-4">AUTONOMOUS FLIGHT, AUTONOMOUS MANUFACTURING</p>
+              <div className="p-4">
                 <p className="">
-                    Even without advanced flight control systems, flight with airships is much simpler than other flight vehicles.
+                    Fundamentally, flight with airships is much simpler than other flight vehicles- they should fly autonomously by default.
                 </p>
                 <p>
-                    Lufta will be the first aviation company to develop a fleets of completely autonomous aircraft.
+                    Lufta plans to be the first aviation company to develop fleets of completely autonomous aircraft.
                 </p>
                 <p className="">
                     As demonstrated with WAAM, Lufta will seek to lead Australian heavy industry to automation in manufacturing.

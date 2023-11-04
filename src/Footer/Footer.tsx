@@ -3,7 +3,7 @@ import React from 'react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-800 text-white py-8 mt-auto">
+    <footer className="bg-black text-white py-8 mt-auto">
               <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
           <img className="h-8 mr-2 scale-x-[-1]" src="/airship.png" />
