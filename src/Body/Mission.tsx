@@ -9,7 +9,7 @@ const Mission: React.FC = () => {
                 <h1 id="our-mission" className='font-medium text-xl sm:text-2xl'>
                     Our Mission: 
                 </h1>
-                <p className='text-xl sm:text-xl lg:text-4xl font-medium mb-2 sm:mb-4 lg:mb-8'>Elevate access to the skies with autonomous airships.</p>
+                <p className='text-xl sm:text-xl lg:text-4xl font-normal lg:font-medium mb-2 sm:mb-4 lg:mb-8'>Elevate access to the skies with autonomous airships.</p>
             </div>
 
             {/* Customers */}

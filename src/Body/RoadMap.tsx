@@ -35,7 +35,7 @@ const RoadMap: React.FC = () => {
                         </div>
                         <div className='text-start'>
                             <h1 className='font-extrabold font-Inter text-2xl pt-8 pb-4'>ORCA</h1>
-                            <p className="text-md italic">Payload 4.5t; Dim 40x12m</p>
+                            <p className="text-md italic">Payload 2t; Dim 40x12m</p>
                         </div>
                     </div>
                     <div className="mt-auto pb-16 lg:pb-4">
@@ -49,7 +49,7 @@ const RoadMap: React.FC = () => {
                         </div>
                         <div className='text-start'>
                             <h1 className='font-extrabold font-Inter text-2xl pt-8 pb-4'>BLUE</h1>
-                            <p className="text-md italic">Payload 1600t; Dim 400x80m</p>
+                            <p className="text-md italic">Payload 1000t; Dim 400x80m</p>
                         </div>
                     </div>
                 </div>
