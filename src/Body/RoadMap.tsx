@@ -9,8 +9,8 @@ const RoadMap: React.FC = () => {
                 <h1 id="our-roadmap" className='font-medium text-xl sm:text-2xl pb-16 lg:pb-4'>
                     Our Roadmap:
                 </h1>
-                <div className='grid grid-cols-1 sm:grid-cols-3'>
-                    <div className="mt-auto pb-16 lg:pb-4">
+                <div className='flex flex-wrap flex-col sm:flex-row'>
+                    <div className="grow mt-auto pb-16 lg:pb-4">
                         <div className="flex">
                         <img src="/person.png" className='h-10 relative mt-auto' />
                         <svg width="150" height="50" xmlns="http://www.w3.org/2000/svg" className='mr-auto mt-auto'>
@@ -24,7 +24,7 @@ const RoadMap: React.FC = () => {
                             <p className="text-md italic">Payload 1kg; Dim 4x1.2m</p>
                         </div>
                     </div>
-                    <div className="mt-auto pb-16 lg:pb-4">
+                    <div className="grow mt-auto pb-16 lg:pb-4">
                         <div className="flex">
                         <img src="/person.png" className='h-6 relative mt-auto' />
                         <svg width="300" height="100" xmlns="http://www.w3.org/2000/svg" className='mr-auto mt-auto'>
@@ -38,7 +38,7 @@ const RoadMap: React.FC = () => {
                             <p className="text-md italic">Payload 2t; Dim 60x12m</p>
                         </div>
                     </div>
-                    <div className="mt-auto pb-16 lg:pb-4">
+                    <div className="grow mt-auto pb-16 lg:pb-4">
                         <div className="flex">
                         <img src="/person.png" className='h-2 relative mt-auto' />
                         <svg width="450" height="150" xmlns="http://www.w3.org/2000/svg" className='mr-auto mt-auto'>
