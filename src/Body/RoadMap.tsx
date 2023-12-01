@@ -41,7 +41,7 @@ const RoadMap: React.FC = () => {
                     <div className="grow mt-auto pb-16 lg:pb-4">
                         <div className="flex">
                         <img src="/person.png" className='h-2 relative mt-auto' />
-                        <svg width="450" height="150" xmlns="http://www.w3.org/2000/svg" className='mr-auto mt-auto'>
+                        <svg width="450" height="150" xmlns="http://www.w3.org/2000/svg" className='mr-auto mt-auto w-full'>
                             <ellipse cx="210" cy="70" rx="200" ry="60" fill="none" stroke="black" stroke-width="3" />
                             <path d="M 370 35 Q 420 -30 410 70" fill="none" stroke="black" stroke-width="3" />
                             <path d="M 370 105 Q 420 165 410 70" fill="none" stroke="black" stroke-width="3" />

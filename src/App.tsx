@@ -13,6 +13,7 @@ import RoadMap from './Body/RoadMap';
 import PrivacyPolicy from './Footer/PrivacyPolicy';
 import TermsOfService from './Footer/TermsOfService';
 import ContactUs from './Footer/ContactUs';
+import Founder from './Body/Founder';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
               <BodyPrinting />
               <Autonomy />
               <RoadMap />
+              <Founder />
             </>
           } />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
