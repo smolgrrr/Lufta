@@ -44,7 +44,7 @@ const Founder: React.FC = () => {
                             </div>
                         </li>
                     </ul>
-                    <img className="w-48 rounded-md m-auto" src="/william.jpeg" />
+                    <img className="w-72 rounded-md m-auto" src="/william.png" />
                 </div>
             </div>
         </div>
