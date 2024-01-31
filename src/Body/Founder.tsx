@@ -6,16 +6,16 @@ const Founder: React.FC = () => {
             <div className="w-full h-0.5 bg-black my-4"></div>
             <div className='p-4 sm:px-6 lg:px-16'>
                 <h1 id="our-founder" className='font-medium text-xl sm:text-2xl pb-8'>
-                    Our Founder:
+                    Our Team:
                 </h1>
                 <p className="text-lg font-bold sm:text-xl mb-6 pb-2 lg:pb-4">WILLIAM HILDER</p>
                 <div className="flex flex-col lg:flex-row text-sm">
                     <ul className='list-disc list-inside lg:pr-12 pb-4'>
-                        <li className='pb-1'>Recent graduate: BE (Honours) Aerospace Engineering and BCom Economics at Monash University, Australia</li>
-                        <li className='pb-1'>97(/99.95) ATAR</li>
+                        <li className='pb-1'>BE (Honours) Aerospace Engineering and BCom Economics at Monash University, Australia</li>
+                        <li className='pb-1'>97/99.95 ATAR</li>
                         <li className='pb-1'>Undergraduate research on hybrid rocket injection</li>
                         <li className='pb-1'>
-                            Prev: Boeing, Umbrel, Parish Engineering, Eutropia Aerospace, LTRAC
+                            Prev: 
                             <div className='flex gap-4 pl-4'>
                                 <a href="https://www.boeing.com/">
                                     <img className="h-8 rounded-md" src="/boeing.png" />
@@ -45,6 +45,15 @@ const Founder: React.FC = () => {
                         </li>
                     </ul>
                     <img className="w-72 rounded-md m-auto" src="/william.png" />
+                </div>
+                <p className="text-lg font-bold sm:text-xl mb-6 pb-2 lg:pb-4">VARINDER SINGH</p>
+                <div className="flex flex-col lg:flex-row text-sm">
+                <img className="w-72 rounded-md m-auto" src="/varinder.jpeg" />
+                    <ul className='list-disc list-inside lg:pr-12 pb-4'>
+                        <li className='pb-1'>Bachelor of Technology, Kurukshetra University</li>
+                        <li className='pb-1'>Post Graduate Diploma Computer Science, Indira Gandhi National Open University</li>
+                        <li className='pb-1'>Full Stack Developer</li>
+                    </ul>
                 </div>
             </div>
         </div>
