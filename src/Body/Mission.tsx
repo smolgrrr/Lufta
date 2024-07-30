@@ -19,10 +19,15 @@ const Mission: React.FC = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 lg:gap-12">
                     <div className='text-start px-4 sm:px-8 lg:px-16 pb-8'>
                         <p className="text-4xl sm:text-5xl lg:text-6xl font-semibold mb-4 sm:mb-8 lg:mb-16">Freight</p>
+                        <div className='p-2'>
+                        <p className="text-xs italic">
+                        "<b>Cheaper, faster transportation has been a major lubricator of trade </b>and wealth creation. For almost two centuries, technology has improved transportation relentlessly. Unfortunately, over the past thirty years, there have been no radical advances in transportation technology (in-flight DVD units are nice, but not revolutionary); take, for example, the travel time across the Atlantic which, for the first time since the Industrial Revolution, is getting longer rather than shorter."
+                        </p>
+                        <p className="text-xs text-right"><a href="https://foundersfund.com/2017/01/manifesto/">- Founders Fund Manifesto</a></p>
+                        </div>
                         <p className="">
-                            In today's globalised economy, rapid and efficient transport is paramount.
-                            Lufta's airships will be crafted to provide an eco-friendly, cost-effective solution to the logistical challenges faced by the freighting industry.
-                            With a lower carbon footprint and the ability to access remote or infrastructure-limited areas, we're offering a solution that's both sustainable and universally adaptable.
+                            Lufta's airships will compete with cargo planes/ships at scale, while being the first meaningful eco-friendly alternative.
+                            With the ability to access remote or infrastructure-limited areas, airships will further open up global trade. 
                         </p>
                     </div>
                     <div className='text-start px-4 sm:px-8 lg:px-16 pb-8'>
