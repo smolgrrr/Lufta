@@ -7,10 +7,10 @@ const HeroBanner: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const isMobile = window.innerWidth <= 640;
-  const videoStyle = isMobile 
-    ? (currentVideo === '/mars_ship.mp4' 
-        ? { objectPosition: 'calc(100% + 190px) center' } 
-        : { objectPosition: 'calc(100% + 650px) center' })
+  const videoStyle = isMobile
+    ? (currentVideo === '/mars_ship.mp4'
+      ? { objectPosition: 'calc(100% + 190px) center' }
+      : { objectPosition: 'calc(100% + 650px) center' })
     : {};
 
 
@@ -48,18 +48,22 @@ const HeroBanner: React.FC = () => {
 
   return (
     <div className="relative h-screen w-full">
-      <video 
-        ref={videoRef} 
-        autoPlay 
+      <video
+        ref={videoRef}
+        autoPlay
         playsInline
-        muted 
-        onEnded={handleVideoEnd} 
-        className="w-full h-full object-cover absolute" 
+        muted
+        onEnded={handleVideoEnd}
+        className="w-full h-full object-cover absolute"
         style={videoStyle} // Change position depeneding on video and screen
       >
         <source src={currentVideo} type="video/mp4" />
       </video>
-      <div className={`absolute top-0 left-0 w-full h-full bg-black transition-opacity duration-500 ${overlayOpacity}`}></div>
+      <div className="absolute bottom-0 left-0 w-full z-10 p-4">
+        <h1 id="our-mission" className="p-4 sm:ml-16 font-bold text-6xl sm:text-7xl text-[#eee7e3] text-left">
+          Airships Return
+        </h1>
+      </div>
     </div>
   );
 };

@@ -3,7 +3,12 @@ import DotAnimation from './DotAnimation';
 
 const Autonomy: React.FC = () => {
     return (
-        <div className="z-2 p-4 sm:p-8 lg:p-16">
+        <div className="z-2 px-4 sm:px-8 lg:px-16 pb-4 sm:pb-8 lg:pb-16">
+                <div className='pl-3 sm:pl-6 lg:pl-12 pb-4 text-left'>
+                    <span id="our-technology" className='font-medium text-xl sm:text-2xl'>
+                        Our Technology:
+                    </span>
+            </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8">
                 <DotAnimation />
                 <div className="text-left">

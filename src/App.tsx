@@ -26,7 +26,6 @@ function App() {
             <>
               <HeroBanner />
               <Mission />
-              <BodyPrinting />
               <Autonomy />
               <RoadMap />
               <Founder />

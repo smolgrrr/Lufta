@@ -38,13 +38,6 @@ const Mission: React.FC = () => {
 
             {/* Technology */}
             <div className="w-full h-0.5 bg-black my-4"></div>
-            <div className="pt-8 sm:pt-12 lg:pt-16">
-                <div className='pl-4 sm:pl-8 lg:pl-16 pb-4'>
-                    <span id="our-technology" className='font-medium text-xl sm:text-2xl'>
-                        Our Technology:
-                    </span>
-                </div>
-            </div>
         </div>
     );
 };

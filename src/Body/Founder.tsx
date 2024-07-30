@@ -46,15 +46,6 @@ const Founder: React.FC = () => {
                     </ul>
                     <img className="w-72 rounded-md m-auto" src="/william.png" />
                 </div>
-                <p className="text-lg font-bold sm:text-xl mb-6 pb-2 lg:pb-4">VARINDER SINGH</p>
-                <div className="flex flex-col lg:flex-row text-sm">
-                <img className="w-72 rounded-md m-auto" src="/varinder.jpeg" />
-                    <ul className='list-disc list-inside lg:pr-12 pb-4'>
-                        <li className='pb-1'>Bachelor of Technology, Kurukshetra University</li>
-                        <li className='pb-1'>Post Graduate Diploma Computer Science, Indira Gandhi National Open University</li>
-                        <li className='pb-1'>Full Stack Developer</li>
-                    </ul>
-                </div>
             </div>
         </div>
     );
