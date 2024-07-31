@@ -48,18 +48,21 @@ const HeroBanner: React.FC = () => {
 
   return (
     <div className="relative h-screen w-full">
+      {/* Black background */}
+      <div className="absolute inset-0 bg-black z-0" />
+
       <video
         ref={videoRef}
         autoPlay
         playsInline
         muted
         onEnded={handleVideoEnd}
-        className="w-full h-full object-cover absolute"
-        style={videoStyle} // Change position depeneding on video and screen
+        className="w-full h-full object-cover absolute z-10"
+        style={videoStyle}
       >
         <source src={currentVideo} type="video/mp4" />
       </video>
-      <div className="absolute bottom-0 left-0 w-full z-10 p-4">
+      <div className="absolute bottom-0 left-0 w-full z-20 p-4">
         <h1 id="our-mission" className="p-4 sm:ml-16 font-bold text-6xl sm:text-7xl text-[#eee7e3] text-left">
           Airships Return
         </h1>

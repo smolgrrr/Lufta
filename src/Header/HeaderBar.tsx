@@ -16,7 +16,7 @@ const HeaderBar: React.FC = () => {
   `;
   return (
     <>
-      <header className="w-full top-0 left-0 absolute z-10 p-4">
+      <header className="w-full top-0 left-0 absolute z-20 p-4">
         <div className="container mx-auto flex justify-between items-center">
         <a href='/'>
           <div className="flex items-center">
