@@ -36,7 +36,7 @@ const Founder: React.FC = () => {
                             <div className='text-sm px-6 lg:px-12 lg:w-2/3'>
                                 <a href="https://www.getwired.app/" className="flex items-center">
                                     <div>
-                                    <span className='hover:underline'>Current main project: getwired.app</span>
+                                    <span className='hover:underline'>Last project: getwired.app</span>
                                     <p className="text-gray-600">Anonymous, decentralised messageboard using Proof-of-Work for spam prevention</p>
                                     </div>
                                     <img className="h-8 rounded-md ml-2" src="https://www.getwired.app/icon.png" />
