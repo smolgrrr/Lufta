@@ -3,7 +3,7 @@ import React from 'react';
 const Team: React.FC = () => {
     return (
         <div className="text-center py-8 sm:py-12 lg:py-16">
-            <h1 className="font-medium text-xl sm:text-2xl lg:text-3xl pb-8">
+            <h1 id="our-team" className="font-medium text-xl sm:text-2xl lg:text-3xl pb-8">
                 Meet the Team
             </h1>
             <div className="flex flex-col lg:flex-row justify-center items-center space-y-8 lg:space-x-16 lg:space-y-0 max-w-4xl mx-auto px-6">
