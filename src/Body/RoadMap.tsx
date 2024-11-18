@@ -1,56 +1,96 @@
-
-import React from 'react';
-
+import React, { useState } from 'react';
+import './RoadMap.css'; // Import the CSS file for custom styling
+// Testing comments....
 const RoadMap: React.FC = () => {
+    const [activeRoadmap, setActiveRoadmap] = useState(1);
+
+    const roadmapDetails = [
+        {
+            id: 1,
+            title: "MINKE",
+            image: "/RoadMap1.png",
+            description: "(MVP) 24 hours of flight endurance, autonomous flight, and a 20kg payload capacity. Enables sentry/surveillance operations at low cost for long missions.",
+            dimensions: "12x3m",
+            payload: "20kg",
+            video: "/CloudBkg.mp4"
+        },
+        {
+            id: 2,
+            title: "ORCA",
+            image: "/RoadMap2.png",
+            description: "High-volume production of a larger airship supporting advanced defence missions, as well as being a domestic freight solutions.",
+            dimensions: "60x12m",
+            payload: "2t",
+            video: "/CloudBkg.mp4"
+        },
+        {
+            id: 3,
+            title: "BLUE",
+            image: "/RoadMap3.png",
+            description: "Heavy-lift cargo airship that competes with cargo ships and aircraft. Able to haul directly from remote and infrastructure-limited areas.",
+            dimensions: "400x80m",
+            payload: "1000t",
+            video: "/CloudBkg.mp4"
+        }
+    ];
+
     return (
-        <div className="text-left p-3 sm:p-4 lg:p-6">
-            <div className="w-full h-0.5 bg-black my-4"></div>
-            <div className='p-4 sm:px-6 lg:px-16'>
-                <h1 id="our-roadmap" className='font-medium text-xl sm:text-2xl pb-16 lg:pb-4'>
-                    Our Roadmap:
-                </h1>
-                <div className='flex flex-wrap flex-col sm:flex-row'>
-                    <div className="grow mt-auto pb-16 lg:pb-4">
-                        <div className="flex">
-                        <img src="/person.png" className='h-10 relative mt-auto' />
-                        <svg width="150" height="50" xmlns="http://www.w3.org/2000/svg" className='mr-auto mt-auto'>
-                            <ellipse cx="75" cy="25" rx="60" ry="20" fill="none" stroke="black" stroke-width="3" />
-                            <path d="M 120 11 Q 140 -10 135 25" fill="none" stroke="black" stroke-width="3" />
-                            <path d="M 120 37 Q 140 58 135 25" fill="none" stroke="black" stroke-width="3" />
-                        </svg>
-                        </div>
-                        <div className='text-start'>
-                            <h1 className='font-extrabold font-Inter text-2xl pt-8 pb-4'>MINKE MK1</h1>
-                            <p className="text-md italic">Payload 1kg; Dim 4x1.2m</p>
-                        </div>
+        <div id="our-Roadmap" className="roadmap-container relative text-left p-4 sm:p-6 md:p-8 lg:p-12 overflow-hidden h-[80vh] flex items-center justify-center">
+            
+            {/* Background Video */}
+            <video
+                key={activeRoadmap} // Re-render video on section change
+                autoPlay
+                loop
+                muted
+                className="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-500 filter opacity-100 blur-none"
+            >
+                <source src={roadmapDetails.find(item => item.id === activeRoadmap)?.video} type="video/mp4" />
+            </video>
+
+            {/* Darken Overlay */}
+            <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60"></div>
+
+            {/* Overlay Content */}
+            <div className="relative z-20 max-w-screen-lg text-white text-left flex flex-col justify-center px-8 space-y-4">
+                
+                {/* Roadmap Slider Buttons - Centered */}
+                <div className="flex justify-center space-x-40 mb-20">
+                    {roadmapDetails.map((roadmap) => (
+                        <button
+                            key={roadmap.id}
+                            className={`font-medium text-lg sm:text-xl lg:text-2xl transition duration-300 ${
+                                activeRoadmap === roadmap.id ? 'underline text-white-800' : 'text-white'
+                            }`}
+                            onMouseEnter={() => setActiveRoadmap(roadmap.id)}
+                        >
+                            {roadmap.title}
+                        </button>
+                    ))}
+                </div>
+
+                {/* Roadmap Content */}
+                <div className="flex flex-col lg:flex-row justify-between items-center lg:space-x-10 w-full">
+                    {/* Image - Increased space for larger screen sizes */}
+                    <div className="lg:w-3/5 w-full mb-6 lg:mb-0">
+                        <img
+                            src={roadmapDetails.find(item => item.id === activeRoadmap)?.image}
+                            alt={`RoadMap ${activeRoadmap}`}
+                            className="w-full h-auto object-contain"
+                        />
                     </div>
-                    <div className="grow mt-auto pb-16 lg:pb-4">
-                        <div className="flex">
-                        <img src="/person.png" className='h-6 relative mt-auto' />
-                        <svg width="300" height="100" xmlns="http://www.w3.org/2000/svg" className='mr-auto mt-auto'>
-                            <ellipse cx="150" cy="50" rx="120" ry="40" fill="none" stroke="black" stroke-width="3" />
-                            <path d="M 240 23 Q 280 -10 270 50" fill="none" stroke="black" stroke-width="3" />
-                            <path d="M 240 76 Q 280 110 270 50" fill="none" stroke="black" stroke-width="3" />
-                        </svg>
-                        </div>
-                        <div className='text-start'>
-                            <h1 className='font-extrabold font-Inter text-2xl pt-8 pb-4'>ORCA</h1>
-                            <p className="text-md italic">Payload 2t; Dim 60x12m</p>
-                        </div>
-                    </div>
-                    <div className="grow mt-auto pb-16 lg:pb-4">
-                        <div className="flex">
-                        <img src="/person.png" className='h-2 relative mt-auto' />
-                        <svg width="450" height="150" xmlns="http://www.w3.org/2000/svg" className='mr-auto mt-auto w-full'>
-                            <ellipse cx="210" cy="70" rx="200" ry="60" fill="none" stroke="black" stroke-width="3" />
-                            <path d="M 370 35 Q 420 -30 410 70" fill="none" stroke="black" stroke-width="3" />
-                            <path d="M 370 105 Q 420 165 410 70" fill="none" stroke="black" stroke-width="3" />
-                        </svg>
-                        </div>
-                        <div className='text-start'>
-                            <h1 className='font-extrabold font-Inter text-2xl pt-8 pb-4'>BLUE</h1>
-                            <p className="text-md italic">Payload 1000t; Dim 400x80m</p>
-                        </div>
+
+                    {/* Description - Increased width for larger screen sizes */}
+                    <div className="lg:w-5/5 w-full text-lg sm:text-xl lg:text-2xl leading-relaxed">
+                        <h2 className="font-extrabold text-3xl mb-4">
+                            {roadmapDetails.find(item => item.id === activeRoadmap)?.title}
+                        </h2>
+                        <p className="text-lg italic mb-2">
+                            Dimensions: {roadmapDetails.find(item => item.id === activeRoadmap)?.dimensions}, Payload: {roadmapDetails.find(item => item.id === activeRoadmap)?.payload}
+                        </p>
+                        <p className="text-md">
+                            {roadmapDetails.find(item => item.id === activeRoadmap)?.description}
+                        </p>
                     </div>
                 </div>
             </div>
@@ -59,4 +99,3 @@ const RoadMap: React.FC = () => {
 };
 
 export default RoadMap;
-

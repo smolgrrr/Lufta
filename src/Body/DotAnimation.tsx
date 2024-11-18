@@ -11,7 +11,7 @@ const DotAnimation: React.FC = () => {
           id="arcPath"
           d="M 50 150 A 100 50 0 0 1 550 150"
           fill="none"
-          stroke="lightgrey"
+          stroke="black"
           strokeWidth="2"
         />
 
@@ -20,8 +20,8 @@ const DotAnimation: React.FC = () => {
         <line x1="540" y1="155" x2="560" y2="155" stroke="black" strokeWidth="2" />
 
         {/* Labels A and B */}
-        <text x="50" y="175" fontSize="14px" textAnchor="middle">A</text>
-        <text x="550" y="175" fontSize="14px" textAnchor="middle">B</text>
+        <text x="50" y="175" fontSize="20px" textAnchor="middle">A</text>
+        <text x="550" y="175" fontSize="20px" textAnchor="middle">B</text>
 
         {/* Animated Dot */}
         <circle r="5" fill="black">

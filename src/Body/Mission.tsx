@@ -1,48 +1,74 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Mission: React.FC = () => {
+    const [hoveredSection, setHoveredSection] = useState<string>('logistics');
 
     return (
-        <div className="text-left p-3 sm:p-5 md:p-8 lg:p-12">
-            {/* Mission */}
-            <div className='p-4 sm:p-6 lg:p-8 px-4 sm:px-8 lg:px-16 '>
-                <h1 id="our-mission" className='font-medium text-xl sm:text-2xl'>
-                    Our Mission: 
-                </h1>
-                <p className='text-xl sm:text-xl lg:text-4xl font-normal lg:font-medium mb-2 sm:mb-4 lg:mb-8'>Making everywhere on Earth easily accessible- connecting every maker to global trade from anywhere.</p>
-            </div>
+        <div className="relative text-left p-4 sm:p-6 md:p-8 lg:p-12 overflow-hidden h-[80vh] flex items-center justify-center">
+            {/* Background Video */}
+            <video
+                key={hoveredSection} // Re-render video on section change
+                autoPlay
+                loop
+                muted
+                className="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-500 filter opacity-100 blur-none"
+            >
+                <source
+                    src={hoveredSection === 'logistics' ? "/LogisticsBackground.mp4" : "/DefenceBkg.mp4"}
+                    type="video/mp4"
+                />
+            </video>
 
-            {/* Customers */}
-            <div className="w-full h-0.5 bg-black my-4"></div>
-            <div className="py-8 sm:py-12 lg:py-16">
-                <div id="our-customers" className='font-medium text-xl sm:text-2xl pl-4 sm:pl-8 lg:pl-16 pb-4'>Our Customers:</div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 lg:gap-12">
-                    <div className='text-start px-4 sm:px-8 lg:px-16 pb-8'>
-                        <p className="text-4xl sm:text-5xl lg:text-6xl font-semibold mb-4 sm:mb-8 lg:mb-16">Freight</p>
-                        <div className='p-2'>
-                        <p className="text-xs italic">
-                        "<b>Cheaper, faster transportation has been a major lubricator of trade </b>and wealth creation. For almost two centuries, technology has improved transportation relentlessly. Unfortunately, over the past thirty years, there have been no radical advances in transportation technology (in-flight DVD units are nice, but not revolutionary); take, for example, the travel time across the Atlantic which, for the first time since the Industrial Revolution, is getting longer rather than shorter."
+            {/* Darken Overlay */}
+            <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60"></div>
+
+            {/* Overlay Content */}
+            <div className="relative z-20 max-w-screen-lg text-white text-left flex flex-col justify-center px-8 space-y-4">
+                
+                {/* Mission Statement */}
+                <section className="space-y-2">
+                    <h1 className="font-semibold text-3xl sm:text-4xl lg:text-5xl ">
+                        Unlocking Boundless Reach and Heavy Lift
+                    </h1>
+                    <p className="text-lg sm:text-xl lg:text-2xl font-light leading-relaxed">
+                        Our dual-use autonomous airships will revolutionise global operations with unmatched range, endurance, and heavy payload capacities. For freighting, they connect makers and builders to global trade with ease. In defence, they provide critical capabilities for intelligence, surveillance, reconnaissance, and logistical support in challenging environments.
+                    </p>
+                </section>
+
+                {/* Hover Sections */}
+                <div className="flex space-x-8">
+                    <button
+                        className={`font-medium text-lg sm:text-xl lg:text-2xl transition duration-300 ${
+                            hoveredSection === 'logistics' ? 'underline' : ''
+                        }`}
+                        onMouseEnter={() => setHoveredSection('logistics')}
+                    >
+                        Logistics
+                    </button>
+                    <button
+                        className={`font-medium text-lg sm:text-xl lg:text-2xl transition duration-300 ${
+                            hoveredSection === 'defense' ? 'underline' : ''
+                        }`}
+                        onMouseEnter={() => setHoveredSection('defense')}
+                    >
+                        Defense
+                    </button>
+                </div>
+
+                {/* Section Descriptions */}
+                <div className="text-lg sm:text-xl lg:text-2xl leading-relaxed">
+                    {hoveredSection === 'logistics' && (
+                        <p>
+                            Lufta’s airships bridge the gap between the high costs of air freight and the long lead times of sea freight, with zero emissions. Our airships will bypass the need for air & sea port hubs. 
                         </p>
-                        <p className="text-xs text-right"><a href="https://foundersfund.com/2017/01/manifesto/">- Founders Fund Manifesto</a></p>
-                        </div>
-                        <p className="">
-                            Lufta's airships will compete with cargo planes/ships at scale, while being the first meaningful eco-friendly alternative.
-                            With the ability to access remote or infrastructure-limited areas, airships will further open up global trade. 
+                    )}
+                    {hoveredSection === 'defense' && (
+                        <p>
+                            Lufta’s airships provide long flight endurance and a large payload capacity at an order-of-magnitude lower cost than existing UAVs. They will act as an autonomous, high-altitude platform for surveillance (ISR) and communication, as well as being able to deliver assets or deploy munitions in contested environments.
                         </p>
-                    </div>
-                    <div className='text-start px-4 sm:px-8 lg:px-16 pb-8'>
-                        <p className="text-4xl sm:text-5xl lg:text-6xl font-semibold mb-4 sm:mb-8 lg:mb-16">Defence</p>
-                        <p className="">
-                            Our airships will provide a bird's eye view, offering crucial strategic advantages in surveillance and reconnaissance.
-                            With extended flight durations, silent operation, and reduced detectability, they're the next-generation solution for advanced situational awareness.
-                            Their ability to carry payloads provides flexibility in mission roles, from delivering vital supplies, deploying assets/munitions, to acting as a communication hub in contested environments.
-                        </p>
-                    </div>
+                    )}
                 </div>
             </div>
-
-            {/* Technology */}
-            <div className="w-full h-0.5 bg-black my-4"></div>
         </div>
     );
 };

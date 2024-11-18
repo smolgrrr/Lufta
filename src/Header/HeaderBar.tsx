@@ -42,9 +42,9 @@ const HeaderBar: React.FC = () => {
         {/* Content for your side panel goes here */}
         <ul className='text-start ml-4 sm:ml-4 lg:ml-12 mt-16 font-semibold'>
           <li className="mb-6"><a href="#our-mission" className="text-white">Our Mission</a></li>
-          <li className="mb-6"><a href="#our-customers" className="text-white">Our Customers</a></li>
           <li className="mb-6"><a href="#our-technology" className="text-white">Our Technology</a></li>
-          <li className="mb-6"><a href="#our-roadmap" className="text-white">Our Roadmap</a></li>
+          <li className="mb-6"><a href="#our-Roadmap" className="text-white">Our Roadmap</a></li>
+          <li className="mb-6"><a href="#our-team" className="text-white">Meet The Team</a></li>
           {/* ... */}
         </ul>
       </div>
