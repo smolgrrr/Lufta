@@ -28,10 +28,10 @@ const Mission: React.FC = () => {
                 {/* Mission Statement */}
                 <section className="space-y-2">
                     <h1 className="font-semibold text-3xl sm:text-4xl lg:text-5xl ">
-                        Enabling Seamless Global Connectivity
+                        Unlocking Boundless Reach and Heavy Lift
                     </h1>
                     <p className="text-lg sm:text-xl lg:text-2xl font-light leading-relaxed">
-                        Reaching every corner of the Earth, connecting creators to worldwide trade with ease. Lufta transforms logistics and defense through advanced, zero-emission airships bridging the gaps in global connectivity.
+                        Our dual-use autonomous airships will revolutionise global operations with unmatched range, endurance, and heavy payload capacities. For freighting, they connect makers and builders to global trade with ease. In defence, they provide critical capabilities for intelligence, surveillance, reconnaissance, and logistical support in challenging environments.
                     </p>
                 </section>
 
@@ -59,12 +59,12 @@ const Mission: React.FC = () => {
                 <div className="text-lg sm:text-xl lg:text-2xl leading-relaxed">
                     {hoveredSection === 'logistics' && (
                         <p>
-                            Lufta’s airships bridge the gap between the high costs of air freight and the long lead times of sea freight, offering a sustainable solution that supports global trade without reliance on traditional infrastructure.
+                            Lufta’s airships bridge the gap between the high costs of air freight and the long lead times of sea freight, with zero emissions. Our airships will bypass the need for air & sea port hubs. 
                         </p>
                     )}
                     {hoveredSection === 'defense' && (
                         <p>
-                            Lufta’s airships provide autonomous, high-altitude platforms for surveillance and communication, adaptable to mission-critical roles with extended endurance and low detectability.
+                            Lufta’s airships provide long flight endurance and a large payload capacity at an order-of-magnitude lower cost than existing UAVs. They will act as an autonomous, high-altitude platform for surveillance (ISR) and communication, as well as being able to deliver assets or deploy munitions in contested environments.
                         </p>
                     )}
                 </div>

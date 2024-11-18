@@ -7,9 +7,9 @@ const RoadMap: React.FC = () => {
     const roadmapDetails = [
         {
             id: 1,
-            title: "MINKE MK1",
+            title: "MINKE",
             image: "/RoadMap1.png",
-            description: "Achieve 24 hours of flight endurance, autonomous flight, and a 20kg payload capacity. Enables sentry/surveillance operations at low cost for long missions.",
+            description: "(MVP) 24 hours of flight endurance, autonomous flight, and a 20kg payload capacity. Enables sentry/surveillance operations at low cost for long missions.",
             dimensions: "12x3m",
             payload: "20kg",
             video: "/CloudBkg.mp4"
@@ -18,25 +18,16 @@ const RoadMap: React.FC = () => {
             id: 2,
             title: "ORCA",
             image: "/RoadMap2.png",
-            description: "High-volume production airship supporting advanced defense surveillance, reconnaissance, and domestic freight solutions.",
+            description: "High-volume production of a larger airship supporting advanced defence missions, as well as being a domestic freight solutions.",
             dimensions: "60x12m",
             payload: "2t",
             video: "/CloudBkg.mp4"
         },
         {
             id: 3,
-            title: "ORCA II",
-            image: "/RoadMap2.png",
-            description: "Ramp up high-volume production of a general-purpose airship, supporting broader enterprise applications.",
-            dimensions: "60x12m",
-            payload: "2t",
-            video: "/CloudBkg.mp4"
-        },
-        {
-            id: 4,
             title: "BLUE",
             image: "/RoadMap3.png",
-            description: "Heavy-lift cargo airship that competes with cargo ships and aircraft for remote and infrastructure-limited areas. Domestic freighting at lower costs.",
+            description: "Heavy-lift cargo airship that competes with cargo ships and aircraft. Able to haul directly from remote and infrastructure-limited areas.",
             dimensions: "400x80m",
             payload: "1000t",
             video: "/CloudBkg.mp4"

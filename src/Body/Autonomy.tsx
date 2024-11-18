@@ -24,15 +24,15 @@ const Autonomy: React.FC = () => {
                     <p className="text-lg sm:text-xl font-light mb-6 text-[#000000]">
                         AUTONOMOUS FLIGHT, AUTONOMOUS MANUFACTURING
                     </p>
-                    <div className="px-2 sm:px-4 text-[#000000]">
+                    <div className="text-[#000000]">
                         <p className="mb-4">
-                            Flight with airships is fundamentally simpler than with other flight vehicles—autonomous flight should be the default.
+                            Flight with airships is fundamentally simpler than with other flight vehicles—autonomous flight will be the default.
                         </p>
                         <p className="mb-4">
                             Lufta plans to be the first aviation company to develop fleets of fully autonomous airships.
                         </p>
                         <p className="mt-4">
-                            As demonstrated with WAAM, Lufta is at the forefront of pushing Australian heavy industry into deep automation for manufacturing.
+                            Lufta will also be at the forefront of pushing Australian heavy industry into deep automation for manufacturing.
                         </p>
                     </div>
                 </div>
