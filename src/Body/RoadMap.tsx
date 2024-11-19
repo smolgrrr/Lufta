@@ -52,14 +52,14 @@ const RoadMap: React.FC = () => {
             <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60"></div>
 
             {/* Overlay Content */}
-            <div className="relative z-20 max-w-screen-lg text-white text-left flex flex-col justify-center px-8 space-y-4">
+            <div className="relative z-20 max-w-screen-lg text-white text-left flex flex-col justify-center px-4 sm:px-8 space-y-4">
                 
                 {/* Roadmap Slider Buttons - Centered */}
-                <div className="flex justify-center space-x-40 mb-20">
+                <div className="flex justify-center space-x-10 sm:space-x-40 mb-10 sm:mb-20">
                     {roadmapDetails.map((roadmap) => (
                         <button
                             key={roadmap.id}
-                            className={`font-medium text-lg sm:text-xl lg:text-2xl transition duration-300 ${
+                            className={`font-medium text-sm sm:text-lg lg:text-2xl transition duration-300 ${
                                 activeRoadmap === roadmap.id ? 'underline text-white-800' : 'text-white'
                             }`}
                             onMouseEnter={() => setActiveRoadmap(roadmap.id)}
@@ -81,14 +81,14 @@ const RoadMap: React.FC = () => {
                     </div>
 
                     {/* Description - Increased width for larger screen sizes */}
-                    <div className="lg:w-5/5 w-full text-lg sm:text-xl lg:text-2xl leading-relaxed">
-                        <h2 className="font-extrabold text-3xl mb-4">
+                    <div className="lg:w-5/5 w-full text-sm sm:text-lg lg:text-2xl leading-relaxed">
+                        <h2 className="font-extrabold text-2xl sm:text-3xl mb-4">
                             {roadmapDetails.find(item => item.id === activeRoadmap)?.title}
                         </h2>
-                        <p className="text-lg italic mb-2">
+                        <p className="text-sm sm:text-lg italic mb-2">
                             Dimensions: {roadmapDetails.find(item => item.id === activeRoadmap)?.dimensions}, Payload: {roadmapDetails.find(item => item.id === activeRoadmap)?.payload}
                         </p>
-                        <p className="text-md">
+                        <p className="text-sm sm:text-md">
                             {roadmapDetails.find(item => item.id === activeRoadmap)?.description}
                         </p>
                     </div>
