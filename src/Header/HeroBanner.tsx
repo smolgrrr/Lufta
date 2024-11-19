@@ -37,7 +37,7 @@ const HeroBanner: React.FC = () => {
   }, [currentVideo]);
 
   return (
-    <div className="relative h-screen w-full">
+    <div className="relative w-full h-[calc(100vh-110px)] sm:h-screen">
       {/* Background Overlay */}
       <div className={`absolute inset-0 bg-black transition-opacity duration-1000 ${overlayOpacity} z-0`} />
 

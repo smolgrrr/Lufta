@@ -36,7 +36,7 @@ const RoadMap: React.FC = () => {
     ];
 
     return (
-        <div id="our-Roadmap" className="roadmap-container relative text-left p-4 sm:p-6 md:p-8 lg:p-12 overflow-hidden h-[80vh] flex items-center justify-center">
+        <div id="our-Roadmap" className="roadmap-container relative text-left p-4 sm:p-6 md:p-8 lg:p-12 overflow-hidden h-[80vh] flex items-center justify-center z-10">
             
             {/* Background Video */}
             <video
