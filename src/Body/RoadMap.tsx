@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './RoadMap.css'; // Import the CSS file for custom styling
 // Testing comments....
 const RoadMap: React.FC = () => {
     const [activeRoadmap, setActiveRoadmap] = useState(1);
+    const videoRef = useRef<HTMLVideoElement>(null);
 
     const roadmapDetails = [
         {
@@ -39,10 +40,11 @@ const RoadMap: React.FC = () => {
             
             {/* Background Video */}
             <video
-                key={activeRoadmap} // Re-render video on section change
+                ref={videoRef}
                 autoPlay
-                loop
+                playsInline
                 muted
+                loop
                 className="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-500 filter opacity-100 blur-none"
             >
                 <source src={roadmapDetails.find(item => item.id === activeRoadmap)?.video} type="video/mp4" />
