@@ -55,7 +55,7 @@ const HeroBanner: React.FC = () => {
       </video>
 
       {/* Title Section */}
-      <div className="absolute bottom-0 left-0 w-full z-20 p-4 sm:pl-16 sm:pb-12">
+      <div className="absolute bottom-0 left-0 w-full z-10 p-4 sm:pl-16 sm:pb-12">
         <h1 id="our-mission" className="font-bold text-5xl sm:text-6xl md:text-7xl text-[#eee7e3] text-left">
           Airships Return
         </h1>
